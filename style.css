@@ -1,51 +1,70 @@
+/* =========================
+   Font Import & Global Styles
+   ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@800&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-html{
-    scroll-behavior:smooth;
+
+html {
+    scroll-behavior: smooth;
 }
-body{
+
+body {
     background: #080808;
-    color: #fff
+    color: #fff;
 }
-#header{
+
+/* =========================
+   Header Section
+   ========================= */
+#header {
     width: 100%;
     height: 100vh;
-    background-image: url(assets/darkwood.jpg);
-    background-size: cover;
-    background-position: center;
+    background: url(assets/darkwood.jpg) center/cover no-repeat;
 }
-.container{
+
+.container {
     padding: 10px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-nav{
-    display:flex;
+
+nav {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.logo{
-    width: 140px;
+
+.logo {
     font-family: 'Cairo Play', sans-serif;
     font-size: 2.5em;
+    color: white;
 }
-nav ul li{
-    display : inline-block;
+
+nav ul {
     list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
     margin: 10px 20px;
 }
-nav ul li a{
+
+nav ul li a {
     color: white;
-    text-decoration: none;   
-    font-size: 18px; 
+    text-decoration: none;
+    font-size: 18px;
     position: relative;
 }
-nav ul li a::after{
+
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -55,74 +74,76 @@ nav ul li a::after{
     bottom: -6px;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
+
+nav ul li a:hover::after {
     width: 100%;
 }
 
-.header-text{
+/* =========================
+   Header Text
+   ========================= */
+.header-text {
     margin-top: 20%;
     font-size: 30px;
 }
-.header-text h1{
+
+.header-text h1 {
     font-size: 60px;
     margin-top: 20px;
 }
-.header-text h1 span{
- color:aqua;
-}
-@keyframes changeRole{
-    0%, 100% { content: "Front-End Developer"; }
-    33.33% { content: "UI/UX Designer"; }
-    66.66% { content: "Programmer"; }
-  }
 
-.header-text p::before{
-    content:'';
-    white-space: nowrap;
-    overflow: hidden;
-    border-left: 2px solid aqua;
-    animation:changeRole infinite 10s;
+.header-text h1 span {
+    color: aqua;
 }
-  
-/*--------about section--------*/
-#about{
+
+/* =========================
+   About Section
+   ========================= */
+#about {
     padding: 80px 0;
     color: #ababab;
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.about-col-1{
-   flex-basis: 35%;
-}
-.about-col-1 img{
-    border-radius: 15px;
-    width: 300px;
-    height: 400px;
+    align-items: center;
 }
 
-.about-col-2{
-    flex-basis: 60%;
+.about-col-1 img {
+    border-radius: 15px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 }
-.sub-title{
+
+.about-col-2 {
+    flex: 1;
+    margin-left: 40px;
+}
+
+.sub-title {
     font-size: 60px;
     color: white;
     font-weight: 600;
 }
-.tab-titles{
+
+.tab-titles {
     display: flex;
     margin: 20px 0 40px;
+    flex-wrap: wrap;
 }
-.tab-links{
-    margin-right: 50px;
+
+.tab-links {
+    margin-right: 30px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
 }
-.tab-links::after{
+
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -132,324 +153,345 @@ nav ul li a:hover::after{
     bottom: -8px;
     transition: 0.5s;
 }
-.tab-links.active-link::after{
+
+.tab-links.active-link::after {
     width: 50%;
 }
-.tab-contents ul li{
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+.tab-contents ul li {
     list-style: none;
     margin: 10px 0;
 }
-.tab-contents ul li span{
+
+.tab-contents ul li span {
     color: aqua;
     font-size: 14px;
 }
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
+
+/* =========================
+   Services Section
+   ========================= */
+#services {
+    padding: 60px 0;
+    text-align: center;
 }
 
-/*-----------------services----------------*/
-
-#services{
-    padding: 30px 0;
-}
-.services-list{
+.services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
-.services-list div{
+
+.services-list div {
     background: #262626;
     padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
     border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    text-align: center;
 }
-.services-list div i{
+
+.services-list div i {
     font-size: 50px;
-    margin-bottom: 30px;
-    transition: background 0.5s,transform 0.5s;
+    margin-bottom: 20px;
 }
-.services-list div h2{
-    font-size: 30px;
-    font-weight: 500;
+
+.services-list div h3 {
+    font-size: 24px;
     margin-bottom: 15px;
 }
-.services-list div a{
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
+
+.services-list div p {
+    font-size: 14px;
+    margin-bottom: 20px;
 }
-.services-list div:hover{
+
+.services-list div button {
+    background: transparent;
+    border: 1px solid aqua;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.services-list div:hover {
     background: #00acc1;
     transform: translateY(-10px);
 }
-/*-----------------portfolio-----------------------*/
-#portfolio{
-    padding: 50px 0;
+
+/* =========================
+   Portfolio Section
+   ========================= */
+#portfolio {
+    padding: 60px 0;
+    text-align: center;
 }
-.work-list{
+
+.work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
-.work{
+
+.work {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-} 
-.work img{
+}
+
+.work img {
     width: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
 }
-.layer{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.6),#00acc1);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s,background 0.5s;
-}
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-.layer a{
-    margin-top: 20px;
-    color: aqua;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-.work:hover img{
- transform: scale(1.1);
-}
-#portfolio{
-    padding: 50px 0;
-}
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-} 
-.work img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-}
-.layer{
+
+.layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#00acc1);
-    border-radius: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #00acc1);
     position: absolute;
     left: 0;
     bottom: 0;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
-    font-size: 14px;
     transition: height 0.5s;
 }
-.layer h3{
+
+.layer h3 {
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.layer a{
-    margin-top: 20px;
+
+.layer p {
+    font-size: 14px;
+}
+
+.layer a {
+    margin-top: 15px;
     color: aqua;
+    background: white;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
     text-decoration: none;
     font-size: 18px;
-    line-height: 60px;
-    background: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
 }
-.work:hover img{
- transform: scale(1.1);
+
+.work:hover img {
+    transform: scale(1.1);
 }
-.work:hover .layer{
+
+.work:hover .layer {
     height: 100%;
 }
 
-/*-------------contact form------*/
-.contact-left{
-    flex-basis: 35%;
+/* =========================
+   Contact Section
+   ========================= */
+#contact {
+    padding: 60px 0;
 }
 
-.contact-right{
-    flex-basis: 60%;
+.contact-left, .contact-right {
+    flex-basis: 48%;
 }
-.contact-left p{
-    margin-top: 30px;
+
+.contact-left p {
+    margin: 20px 0;
+    font-size: 16px;
 }
-.contact-left p i{
+
+.contact-left p i {
     color: aqua;
-    margin-right: 15px;
-    font-size: 25px;
+    margin-right: 10px;
+    font-size: 20px;
 }
-.social-icons{
-    margin-top: 30px;
+
+.social-icons {
+    margin-top: 20px;
 }
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
+
+.social-icons a {
     color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: transform 0.3s, color 0.3s;
 }
-.social-icons a:hover{
+
+.social-icons a:hover {
     color: aqua;
     transform: translateY(-5px);
 }
 
-.btn{
-   display: block;
-   margin: 50px auto;
-   width: fit-content;
-   border: 1px solid aqua;
-   padding: 14px 50px;
-   border-radius: 5px;
-   text-decoration: none;
-   color: white;
-}
-.btn:hover{
-    background: #00acc1;
-    transition: background 0.5s;
-}
-
-.btn.btn2{
+.btn {
     display: inline-block;
-    background: #00acc1;
-}
-.contact-right form{
-    width: 100%;
-}
-form input,form textarea{
-    width: 100%;
-    border: 0;
-    outline: none;
+    border: 1px solid aqua;
+    padding: 10px 30px;
+    border-radius: 5px;
     color: white;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    font-size: 18px;
-    border-radius: 6px;
-}
-form .btn2{
-    padding: 18px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-.footer{
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    font-weight: 300;
-    background: #262626;
-    margin-top: 20px;
+    text-decoration: none;
+    background: transparent;
+    transition: background 0.3s;
 }
 
-/*---------------css for small screen-----------*/
-nav .fas{
+.btn:hover, .btn2 {
+    background: #00acc1;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    background: #262626;
+    color: white;
+    border: none;
+    font-size: 16px;
+    resize: none;
+}
+
+/* =========================
+   Footer Section
+   ========================= */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #262626;
+    font-size: 14px;
+}
+
+/* =========================
+   Navigation Icon (Mobile)
+   ========================= */
+nav .fas {
     display: none;
 }
 
-@media only screen and (max-width: 600px){
-    #header{
-        background-image: url(assets/bgimg3.png);
+/* =========================
+   Projects Section
+   ========================= */
+#projects {
+    padding: 60px 0;
+}
 
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin-top: 40px;
+}
+
+.project {
+    background: #262626;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.project:hover {
+    background: #00acc1;
+    transform: translateY(-8px);
+}
+
+.project h3 {
+    color: aqua;
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ababab;
+}
+
+.project .btn {
+    margin: 10px 0 0 0;
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid aqua;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background: transparent;
+    transition: background 0.3s;
+}
+
+.project .btn:hover {
+    background: white;
+    color: black;
+}
+
+/* =========================
+   Responsive Styles (Media Queries)
+   ========================= */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .header-text{
-        margin-top: 100%;
-        font-size: 30px;
-    }
-    .header-text h1{
-        font-size: 30px;
-    }
-    nav .fas{
-        display: block;
-        font-size: 25px;
-    }
-    nav ul{
+
+    nav ul {
+        flex-direction: column;
         background: #00796B;
         position: fixed;
         top: 0;
         right: -200px;
         width: 200px;
         height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
+        padding-top: 60px;
+        z-index: 999;
         transition: right 0.5s;
     }
-    nav ul li{
-        display: block;
-        margin: 25px;
+
+    nav ul li {
+        margin: 20px 0;
     }
-    nav ul .fas{
-        position: absolute;
-        top: 25px;
-        left: 25px;
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+        color: white;
         cursor: pointer;
     }
-    .sub-title{
-        font-size: 40px;
+
+    .header-text {
+        margin-top: 60%;
+        font-size: 24px;
     }
-    .about-col-1,.about-col-2{
+
+    .header-text h1 {
+        font-size: 36px;
+    }
+
+    .sub-title {
+        font-size: 36px;
+    }
+
+    .about-col-2 {
+        margin-left: 0;
+    }
+
+    .contact-left, .contact-right {
         flex-basis: 100%;
-    }
-    .about-col-1{
-        margin-bottom: 30px;
-    }
-    .about-col-2{
-        font-size: 14px;
-    }
-    .tab-links{
-        font-size: 16px;
-        margin-right: 20px;
-    }
-    .contact-left,.contact-right{
-        flex-basis: 100%;
-    }
-    .footer{
-        font-size: 14px;
+        margin-bottom: 20px;
     }
 }
