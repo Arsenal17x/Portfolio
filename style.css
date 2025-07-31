@@ -408,7 +408,8 @@ nav .fas {
 }
 
 .project:hover {
-    background: #00acc1;
+    border: #00796B 2px solid;
+    
     transform: translateY(-8px);
 }
 
