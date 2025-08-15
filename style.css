@@ -229,80 +229,6 @@ nav ul li a:hover::after {
     transform: translateY(-10px);
 }
 
-/* =========================
-   Portfolio Section
-   ========================= */
-#portfolio {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.work {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.work img {
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-}
-
-.layer {
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #00acc1);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    text-align: center;
-    transition: height 0.5s;
-}
-
-.layer h3 {
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.layer p {
-    font-size: 14px;
-}
-
-.layer a {
-    margin-top: 15px;
-    color: aqua;
-    background: white;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.work:hover img {
-    transform: scale(1.1);
-}
-
-.work:hover .layer {
-    height: 100%;
-}
 
 /* =========================
    Contact Section
@@ -343,6 +269,7 @@ nav ul li a:hover::after {
 }
 
 .btn {
+    margin-top: 20px;
     display: inline-block;
     border: 1px solid aqua;
     padding: 10px 30px;
