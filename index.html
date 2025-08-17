@@ -53,7 +53,7 @@
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                         <a href="https://leetcode.com/Anshul17x" target="_blank" aria-label="LeetCode">
-                            <i class="fa-solid fa-code"></i>
+                            <img src="assets/leetcode-svgrepo-com.svg" style="color: white; width: 30px; height: 30px;">
                         </a>
                     </div>
                 </div>
@@ -176,35 +176,77 @@
     </section>
 
     <section id="contact">
-        <div class="container row">
-            <div class="contact-left">
-                <h2 class="sub-title">Contact Me</h2>
-                <p><i class="fa-solid fa-envelope"></i> anshulr955@example.com</p>
-                <p><i class="fa-solid fa-phone"></i> +91 7830791437</p>
-
-                <div class="social-icons">
-                    <a href="https://github.com/Arsenal17x" target="_blank" aria-label="GitHub">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/anshul-rana-198165348" target="_blank" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://leetcode.com/Anshul17x" target="_blank" aria-label="LeetCode">
-                        <i class="fa-solid fa-code"></i>
-                    </a>
-                </div>
-
-                <button class="btn btn2" onclick="window.location.href='assets/AR_Resume.pdf'" download>Download
-                    CV</button>
-            </div>
-
-            <div class="contact-right">
-                <form action="mailto:your_email@example.com" method="post" enctype="text/plain">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" placeholder="Your Message" rows="6" required></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+        <div class="contact-container">
+            <div class="contact-header" style="text-align:center; margin-bottom: 32px;">
+            <h2 style="font-size:2.2em; font-weight:500; margin-bottom:8px;">Get In Touch</h2>
+            <p style="color:#ababab; font-size:1.08em;">
+                Have a project in mind or want to discuss opportunities? I’d love to hear from you.<br>
+                Let’s create something amazing together.
+            </p>
+        </div>
+            <!-- Left: Form Card -->
+            <div class="contact-card contact-form-card">
+                <h2 class="sub-title">Send a Message</h2>
+                <form class="contact-form" action="mailto:your_email@example.com" method="post" enctype="text/plain">
+                    <div class="contact-form-row">
+                        <div class="contact-form-group">
+                            <label for="contact-name">Name *</label>
+                            <input id="contact-name" type="text" name="Name" placeholder="Your full name" required>
+                        </div>
+                        <div class="contact-form-group">
+                            <label for="contact-email">Email *</label>
+                            <input id="contact-email" type="email" name="Email" placeholder="your.email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="contact-subject">Subject *</label>
+                        <input id="contact-subject" type="text" name="Subject" placeholder="What's this about?" required>
+                    </div>
+                    <div class="contact-form-group">
+                        <label for="contact-message">Message *</label>
+                        <textarea id="contact-message" name="Message" placeholder="Tell me about your project or inquiry..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn2">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
                 </form>
+            </div>
+            <!-- Right: Info Column with 3 separate cards -->
+            <div class="contact-info-column">
+                <div class="contact-card contact-info-card">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <span class="contact-info-text">anshulr955@gmail.com</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"><i class="fa-solid fa-phone"></i></span>
+                            <span class="contact-info-text">+91 7830791437</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <span class="contact-info-text">Uttarakhand, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-card contact-follow-card">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/Arsenal17x" target="_blank" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anshul-rana-198165348" target="_blank" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://leetcode.com/Anshul17x" target="_blank" aria-label="LeetCode">
+                            <img src="assets/leetcode-svgrepo-com.svg" style="width: 26px; height: 26px;">
+                        </a>
+                    </div>
+                    <p style="color:#ababab; font-size:0.98em;">
+                        Let's connect and stay in touch! Follow me for updates on my latest projects and insights.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
