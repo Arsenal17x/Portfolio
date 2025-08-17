@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,197 +9,209 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/879b554214.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<script defer src="script.js"></script>
-<header id="header">
-    <div class="container">
-        <nav>
-            <h1 class="logo">Portfolio</h1>
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-        </nav>
-
-        <div class="header-text">
-            <p id="role"></p>
-            <h1>Hi, I'm <span>Anshul Rana</span> <br>From India</h1>
-        </div>
-    </div>
-</header>
-
-<section id="about">
-    <div class="container row">
-        <div class="about-col-1">
-            <img src="assets/bgimg3.png" alt="Profile Picture">
-        </div>
-        <div class="about-col-2">
-            <h2 class="sub-title">About Me</h2>
-            <p>Hello, I'm a Front-End Developer specializing in translating creative visions into functional, visually appealing websites. With a keen eye for design, I excel as a UI/UX designer, ensuring user-centric interfaces that elevate the overall experience.</p>
-
-            <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                <p class="tab-links" onclick="opentab('tech')">Tech Stack</p>
-                <p class="tab-links" onclick="opentab('education')">Education</p>
+    <script defer src="script.js"></script>
+    <section id="home">
+        <header id="header">
+            <div class="navbar">
+                <nav>
+                    <h1 class="logo">Portfolio</h1>
+                    <ul id="sidemenu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
             </div>
+        </header>
 
-            <div class="tab-contents active-tab" id="skills">
-                <ul>
-                    <li><span>UI/UX</span> Designing Web/App interfaces</li>
-                    <li><span>Front-End Development</span> Responsive Web Apps</li>
-                    <li><span>Programming</span> Competitive Programming, DSA</li>
-                </ul>
-            </div>
-
-            <div class="tab-contents" id="tech">
-                <ul>
-                    <li><span>Languages</span> HTML, CSS, PHP, JavaScript, C, C++, Python</li>
-                    <li><span>Frameworks</span> Bootstrap, Tailwind CSS, React</li>
-                    <li><span>Databases</span> MySQL, MongoDB</li>
-                    <li><span>Version Control</span> Git, GitHub</li>
-                    <li><span>Design Tools</span> Canva, WebFlow</li>
-                    <li><span>IDE</span> Visual Studio Code</li>
-                </ul>
-            </div>
-
-            <div class="tab-contents" id="education">
-                <ul>
-                    <li><span>2022 - Present</span> B.Tech - Graphic Era Hill University</li>
-                    <li><span>2022</span> Intermediate - Doon Convent School</li>
-                    <li><span>2020</span> High School - Doon Convent School</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="services">
-    <div class="container">
-        <h2 class="sub-title">My Services</h2>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h3>Web Design</h3>
-                <p>Crafting clean, modern, responsive websites tailored to client needs.</p>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop"></i>
-                <h3>UI/UX Design</h3>
-                <p>Creating user-friendly interfaces with a focus on accessibility and experience.</p>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h3>App Design</h3>
-                <p>Designing intuitive mobile app experiences from wireframe to final product.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="projects">
-    <div class="container">
-        <h2 class="sub-title">My Projects</h2>
-
-        <div class="project-list">
-
-            <div class="project">
-                <h3>CPU Scheduling Visualizer</h3>
-                <p>Interactive web app simulating 4+ CPU scheduling algorithms with real-time Gantt chart rendering and performance comparison.</p>
-                <p><strong>Tech Stack:</strong> React, Next.js, Tailwind CSS, JavaScript</p>
-                <a href="https://cpu-schedular-ar.netlify.app/" target="_blank" class="btn">View on GitHub</a>
-            </div>
-
-            <div class="project">
-                <h3>AQI Index Prediction</h3>
-                <p>Random Forest-based model with 86% R² score to predict AQI and PM2.5 levels. Features real-time AQI alerts and health tips.</p>
-                <p><strong>Tech Stack:</strong> Python, Machine Learning, Streamlit</p>
-                <a href="https://github.com/Arsenal17x/AQI-Prediction" target="_blank" class="btn">View on GitHub</a>
-            </div>
-
-            <div class="project">
-                <h3>Calorie Burn Prediction System</h3>
-                <p>Calorie prediction model with 98% accuracy using XGBoost. Real-time interface with sub-200ms response for user input.</p>
-                <p><strong>Tech Stack:</strong> Python, Machine Learning, Streamlit</p>
-                <a href="https://github.com/Arsenal17x/Calorie-Burn-Prediction-System-Using-ML" target="_blank" class="btn">View on GitHub</a>
-            </div>
-
-            <div class="project">
-                <h3>Text to Speech Converter</h3>
-                <p>Browser-based text-to-speech tool with multilingual support and 10+ voice options powered by Web Speech API.</p>
-                <p><strong>Tech Stack:</strong> JavaScript, HTML, CSS</p>
-                <a href="https://github.com/Arsenal17x" target="_blank" class="btn">View on GitHub</a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- <section id="portfolio">
-    <div class="container">
-        <h2 class="sub-title">My Work</h2>
-        <div class="work-list">
-            <div class="work">
-                <img src="assets/work-1.png" alt="Social Media App">
-                <div class="layer">
-                    <h3>Social Media App</h3>
-                    <p>Connect with people around the world. Available on Play Store.</p>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-text">
+                    <p id="role"></p>
+                    <h1>Hi, I'm <span>Anshul Rana</span> <br>From India</h1>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn">
+                            <i class="fa-solid fa-envelope" style="margin-right:8px;"></i>
+                            Get in Touch
+                        </a>
+                        <a href="assets/AR_Resume.pdf" class="btn" download>
+                            <i class="fa-solid fa-download" style="margin-right:8px;"></i>
+                            Download CV
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/Arsenal17x" target="_blank" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anshul-rana-198165348" target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://leetcode.com/Anshul17x" target="_blank" aria-label="LeetCode">
+                            <i class="fa-solid fa-code"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+        </section>
+    </section>
 
-            <div class="work">
-                <img src="assets/work-2.png" alt="Music App">
-                <div class="layer">
-                    <h3>Music App</h3>
-                    <p>Groove with your favorite playlists. Available on Play Store.</p>
-                </div>
+    <section id="about">
+        <div class="container row">
+            <div class="about-col-1">
+                <img src="assets/bgimg3.png" alt="Profile Picture">
             </div>
+            <div class="about-col-2">
+                <h2 class="sub-title">About Me</h2>
+                <p>Hello, I'm a Front-End Developer specializing in translating creative visions into functional,
+                    visually appealing websites. With a keen eye for design, I excel as a UI/UX designer, ensuring
+                    user-centric interfaces that elevate the overall experience.</p>
 
-            <div class="work">
-                <img src="assets/work-3.png" alt="Travel App">
-                <div class="layer">
-                    <h3>Travel App</h3>
-                    <p>Explore the world with ease. Available on Play Store.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('tech')">Tech Stack</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span> Designing Web/App interfaces</li>
+                        <li><span>Front-End Development</span> Responsive Web Apps</li>
+                        <li><span>Programming</span> Competitive Programming, DSA</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="tech">
+                    <ul>
+                        <li><span>Languages</span> HTML, CSS, PHP, JavaScript, C, C++, Python</li>
+                        <li><span>Frameworks</span> Bootstrap, Tailwind CSS, React</li>
+                        <li><span>Databases</span> MySQL, MongoDB</li>
+                        <li><span>Version Control</span> Git, GitHub</li>
+                        <li><span>Design Tools</span> Canva, WebFlow</li>
+                        <li><span>IDE</span> Visual Studio Code</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - Present</span> B.Tech - Graphic Era Hill University</li>
+                        <li><span>2022</span> Intermediate - Doon Convent School</li>
+                        <li><span>2020</span> High School - Doon Convent School</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-</section> -->
+    </section>
 
-<section id="contact">
-    <div class="container row">
-        <div class="contact-left">
-            <h2 class="sub-title">Contact Me</h2>
-            <p><i class="fa-solid fa-envelope"></i> anshulr955@example.com</p>
-            <p><i class="fa-solid fa-phone"></i> +91 7830791437</p>
+    <section id="services">
+        <div class="container">
+            <h2 class="sub-title">My Services</h2>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Web Design</h3>
+                    <p>Crafting clean, modern, responsive websites tailored to client needs.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating user-friendly interfaces with a focus on accessibility and experience.</p>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h3>App Design</h3>
+                    <p>Designing intuitive mobile app experiences from wireframe to final product.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="social-icons">
-                <a href="https://github.com/Arsenal17x"><i class="fa-brands fa-github"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
+    <section id="projects">
+        <div class="container">
+            <h2 class="sub-title">My Projects</h2>
+
+            <div class="project-list">
+
+                <div class="project">
+                    <h3>CPU Scheduling Visualizer</h3>
+                    <p>Interactive web app simulating 4+ CPU scheduling algorithms with real-time Gantt chart rendering
+                        and performance comparison.</p>
+                    <p><strong>Tech Stack:</strong> React, Next.js, Tailwind CSS, JavaScript</p>
+                    <a href="https://cpu-schedular-ar.netlify.app/" target="_blank" class="btn">View on GitHub</a>
+                </div>
+
+                <div class="project">
+                    <h3>AQI Index Prediction</h3>
+                    <p>Random Forest-based model with 86% R² score to predict AQI and PM2.5 levels. Features real-time
+                        AQI alerts and health tips.</p>
+                    <p><strong>Tech Stack:</strong> Python, Machine Learning, Streamlit</p>
+                    <a href="https://github.com/Arsenal17x/AQI-Prediction" target="_blank" class="btn">View on
+                        GitHub</a>
+                </div>
+
+                <div class="project">
+                    <h3>Calorie Burn Prediction System</h3>
+                    <p>Calorie prediction model with 98% accuracy using XGBoost. Real-time interface with sub-200ms
+                        response for user input.</p>
+                    <p><strong>Tech Stack:</strong> Python, Machine Learning, Streamlit</p>
+                    <a href="https://github.com/Arsenal17x/Calorie-Burn-Prediction-System-Using-ML" target="_blank"
+                        class="btn">View on GitHub</a>
+                </div>
+
+                <div class="project">
+                    <h3>Text to Speech Converter</h3>
+                    <p>Browser-based text-to-speech tool with multilingual support and 10+ voice options powered by Web
+                        Speech API.</p>
+                    <p><strong>Tech Stack:</strong> JavaScript, HTML, CSS</p>
+                    <a href="https://github.com/Arsenal17x" target="_blank" class="btn">View on GitHub</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container row">
+            <div class="contact-left">
+                <h2 class="sub-title">Contact Me</h2>
+                <p><i class="fa-solid fa-envelope"></i> anshulr955@example.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 7830791437</p>
+
+                <div class="social-icons">
+                    <a href="https://github.com/Arsenal17x" target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anshul-rana-198165348" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://leetcode.com/Anshul17x" target="_blank" aria-label="LeetCode">
+                        <i class="fa-solid fa-code"></i>
+                    </a>
+                </div>
+
+                <button class="btn btn2" onclick="window.location.href='assets/AR_Resume.pdf'" download>Download
+                    CV</button>
             </div>
 
-            <button class="btn btn2" onclick="window.location.href='assets/AR_Resume.pdf'" download>Download CV</button>
+            <div class="contact-right">
+                <form action="mailto:your_email@example.com" method="post" enctype="text/plain">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" placeholder="Your Message" rows="6" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
         </div>
+    </section>
 
-        <div class="contact-right">
-            <form action="mailto:your_email@example.com" method="post" enctype="text/plain">
-                <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your Email" required>
-                <textarea name="Message" placeholder="Your Message" rows="6" required></textarea>
-                <button type="submit" class="btn btn2">Submit</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    <p>&copy; 2024 Anshul Rana | Developed with ❤️</p>
-</footer>
+    <footer class="footer">
+        <p>Developed with ❤️ by Anshul Rana | &copy; 2024 All rights reserved </p>
+    </footer>
 </body>
+
 </html>

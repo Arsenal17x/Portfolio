@@ -1,6 +1,3 @@
-/* =========================
-   Font Import & Global Styles
-   ========================= */
 @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@800&display=swap');
 
 * {
@@ -20,17 +17,29 @@ body {
 }
 
 /* =========================
-   Header Section
+   Home Page
    ========================= */
-#header {
+#home{
     width: 100%;
-    height: 100vh;
-    background: url(assets/darkwood.jpg) center/cover no-repeat;
+    background-image: url(assets/darkwood.jpg);
+}
+#header {
+    background: transparent;
+    position: sticky;
+    top:0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .container {
     padding: 10px 10%;
     max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar{
+    padding:0px 10%;
+    /* max-width: 1200px; */
     margin: 0 auto;
 }
 
@@ -80,20 +89,88 @@ nav ul li a:hover::after {
 }
 
 /* =========================
-   Header Text
+   Hero Section
    ========================= */
-.header-text {
+#hero {
+    height: 100vh;
+    background: url(assets/darkwood.jpg) center/cover no-repeat;
+    /* display: flex;
+    align-items: center; */
+}
+
+.hero-text {
     margin-top: 20%;
     font-size: 30px;
 }
 
-.header-text h1 {
+.hero-text h1 {
     font-size: 60px;
     margin-top: 20px;
 }
 
-.header-text h1 span {
+.hero-text h1 span {
     color: aqua;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-actions .btn {
+    font-size: 1rem;
+    padding: 10px 32px;
+    border-radius: 10px;
+    border: 2px solid aqua;
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 12px 0 rgba(0,255,255,0.05);
+}
+
+.hero-actions .btn:hover {
+    background: aqua;
+    color: #080808;
+    box-shadow: 0 4px 24px 0 rgba(0,255,255,0.15);
+    border-color: #00acc1;
+}
+
+.hero-social {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.hero-social a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.hero-social a:hover {
+    color: aqua;
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* Responsive for hero */
+@media (max-width: 768px) {
+    #hero {
+        height: auto;
+        min-height: 60vh;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .hero-text {
+        margin-top: 60%;
+        font-size: 24px;
+    }
+    .hero-text h1 {
+        font-size: 36px;
+    }
 }
 
 /* =========================
@@ -296,15 +373,6 @@ form input, form textarea {
     resize: none;
 }
 
-/* =========================
-   Footer Section
-   ========================= */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: #262626;
-    font-size: 14px;
-}
 
 /* =========================
    Navigation Icon (Mobile)
@@ -401,12 +469,12 @@ nav .fas {
         cursor: pointer;
     }
 
-    .header-text {
+    .hero-text {
         margin-top: 60%;
         font-size: 24px;
     }
 
-    .header-text h1 {
+    .hero-text h1 {
         font-size: 36px;
     }
 
@@ -422,4 +490,15 @@ nav .fas {
         flex-basis: 100%;
         margin-bottom: 20px;
     }
+}
+
+/* =========================
+   Footer Section
+   ========================= */
+.footer {
+     margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background: #262626;
+    font-size: 14px;
 }
